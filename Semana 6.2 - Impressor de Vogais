@@ -1,0 +1,18 @@
+def print_vowels(phrase):
+    # Definindo as vogais
+    vowels = "aeiouAEIOU"
+    
+    # Variável para armazenar as vogais encontradas
+    found_vowels = ""
+    
+    # Percorrer cada caractere da frase
+    for char in phrase:
+        if char in vowels:
+            found_vowels += char
+    
+    return found_vowels
+
+# Exemplo de uso
+phrase = input("Digite uma palavra ou frase: ")
+vowels_in_phrase = print_vowels(phrase)
+print("Vogais na frase:", vowels_in_phrase)
