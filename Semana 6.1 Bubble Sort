@@ -1,0 +1,23 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+def main():
+    # Solicita que o usuário insira números separados por espaço
+    user_input = input("Digite os números que deseja ordenar, separados por espaço: ")
+    
+    # Converte a string de entrada em uma lista de inteiros
+    arr = list(map(int, user_input.split()))
+    
+    # Chama a função de ordenação
+    sorted_arr = bubble_sort(arr)
+    
+    print("Array ordenado:", sorted_arr)
+
+# Executa o programa principal
+if __name__ == "__main__":
+    main()
