@@ -1,0 +1,100 @@
+Exercício 1:
+
+def imprimir_informacoes(nome, idade, cidade):
+    print("Nome:", nome, "Idade:", idade, "Cidade:", cidade, sep=" - ", end="!\n")
+
+# Exemplo de uso com os dados fornecidos
+imprimir_informacoes("Fulano", 18, "Rio de Janeiro")
+
+Exercício 2:
+
+def calculadora():
+    # Solicitar dois números ao usuário
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+    
+    # Solicitar a operação desejada
+    operacao = input("Digite a operação desejada (+, -, *, /): ")
+
+    # Realizar a operação com base no que o usuário escolheu
+    if operacao == '+':
+        resultado = num1 + num2
+    elif operacao == '-':
+        resultado = num1 - num2
+    elif operacao == '*':
+        resultado = num1 * num2
+    elif operacao == '/':
+        # Verificar se o segundo número é diferente de zero
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            print("Erro: divisão por zero não é permitida.")
+            return
+    else:
+        print("Operação inválida!")
+        return
+
+    # Exibir o resultado
+    print(f"O resultado de {num1} {operacao} {num2} é: {resultado}")
+
+# Chamar a função
+calculadora()
+
+Exercício 3:
+
+def lista_de_compras():
+    # Solicitar ao usuário que digite os itens separados por vírgula
+    itens = input("Digite os itens da lista de compras, separados por vírgula: ")
+
+    # Dividir os itens com base na vírgula e remover espaços extras
+    lista = [item.strip() for item in itens.split(',')]
+
+    # Organizar a lista em ordem alfabética
+    lista.sort()
+
+    # Exibir os itens organizados em ordem alfabética
+    print("\nItens da lista de compras (ordenados):")
+    for item in lista:
+        print(item)
+
+# Chamar a função
+lista_de_compras()
+
+Exercício 4:
+
+def celsius_para_fahrenheit():
+    # Solicitar ao usuário a temperatura em Celsius
+    celsius = float(input("Digite a temperatura em graus Celsius: "))
+    
+    # Converter Celsius para Fahrenheit usando a fórmula
+    fahrenheit = (celsius * 9/5) + 32
+    
+    # Exibir o resultado da conversão
+    print(f"A temperatura em Fahrenheit é: {fahrenheit:.2f}°F")
+
+# Chamar a função
+celsius_para_fahrenheit()
+
+Exercício 5:
+
+def coletar_nomes():
+    nomes = []  # Lista para armazenar os nomes digitados
+
+    while True:
+        # Solicitar ao usuário que digite um nome
+        nome = input("Digite um nome (ou 'sair' para encerrar): ")
+
+        # Verificar se o usuário digitou 'sair' para encerrar o laço
+        if nome.lower() == 'sair':
+            break
+        
+        # Adicionar o nome à lista
+        nomes.append(nome)
+
+    # Exibir os nomes digitados
+    print("\nNomes digitados:")
+    for nome in nomes:
+        print(nome)
+
+# Chamar a função
+coletar_nomes()
